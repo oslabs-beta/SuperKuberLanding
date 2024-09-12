@@ -16,7 +16,7 @@ export function Footer() {
               <Logomark className="h-10 w-10 flex-none fill-cyan-500" />
               <div className="ml-4">
                 <p className="text-2xl font-medium tracking-tight text-white">K8Mate</p>
-                <p className="mt-1 text-lg text-gray-400">Reliable K8s monitoring systems</p>
+                <p className="mt-1 text-lg text-gray-400">K8s Monitoring Simplified</p>
               </div>
             </div>
             <nav className="mt-11 flex gap-8">

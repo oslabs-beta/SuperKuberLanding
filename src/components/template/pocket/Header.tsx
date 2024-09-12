@@ -30,49 +30,49 @@ function MenuIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   )
 }
 
-// function ChevronUpIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
-//   return (
-//     <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" {...props}>
-//       <path
-//         d="M17 14l-5-5-5 5"
-//         strokeWidth={2}
-//         strokeLinecap="round"
-//         strokeLinejoin="round"
-//       />
-//     </svg>
-//   )
-// }
+function ChevronUpIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" {...props}>
+      <path
+        d="M17 14l-5-5-5 5"
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  )
+}
 
-// function MobileNavLink(
-//   props: Omit<
-//     React.ComponentPropsWithoutRef<typeof PopoverButton<typeof Link>>,
-//     'as' | 'className'
-//   >,
-// ) {
-//   return (
-//     <PopoverButton
-//       as={Link}
-//       className="block text-base leading-7 tracking-tight text-gray-700"
-//       {...props}
-//     />
-//   )
-// }
+function MobileNavLink(
+  props: Omit<
+    React.ComponentPropsWithoutRef<typeof PopoverButton<typeof Link>>,
+    'as' | 'className'
+  >,
+) {
+  return (
+    <PopoverButton
+      as={Link}
+      className="block text-base leading-7 tracking-tight text-gray-700"
+      {...props}
+    />
+  )
+}
 
 export function Header() {
   return (
     <header>
       <nav>
         <Container className="relative z-50 flex justify-between py-8">
-          <div className="relative z-10 flex items-center gap-16">
+          <div className="relative z-10 flex items-center gap-10">
             <Link href="/" aria-label="Home">
               <Logo className="h-10 w-auto" /> 
             </Link>
-            <div className="hidden lg:flex lg:gap-10">
+            <div className="flex lg:gap-10">
               <NavLinks />
             </div>
           </div>
           <div className="flex items-center gap-6">
-            <Popover className="lg:hidden">
+            {/* <Popover className="lg:hidden">
               {({ open }) => (
                 <>
                   <PopoverButton
@@ -98,7 +98,7 @@ export function Header() {
                           exit={{ opacity: 0 }}
                           className="fixed inset-0 z-0 bg-gray-300/60 backdrop-blur"
                         />
-                        {/* <PopoverPanel
+                        <PopoverPanel
                           static
                           as={motion.div}
                           initial={{ opacity: 0, y: -32 }}
@@ -133,17 +133,17 @@ export function Header() {
                             </Button>
                             <Button href="#">Download the app</Button>
                           </div>
-                        </PopoverPanel> */}
+                        </PopoverPanel>
                       </>
                     )}
                   </AnimatePresence>
                 </>
               )}
-            </Popover>
+            </Popover> */}
             {/* <Button variant="outline" className="hidden lg:block" onClick={() => window.location.href = 'https://github.com/oslabs-beta/super-kuber'}>
               GitHub
             </Button> */}
-            <Button className="hidden lg:block" onClick={() => window.location.href = 'https://github.com/oslabs-beta/super-kuber'}>
+            <Button className="hidden lg:block" onClick={() => window.open('https://github.com/oslabs-beta/super-kuber','_blank')}>
               GitHub
             </Button>
           </div>
